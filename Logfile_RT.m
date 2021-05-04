@@ -1,6 +1,6 @@
 %% RT script, takes the presentation logfiles, grabs the stimulus type, ISI and RT. Organizes it by ISI and plots it in bar plots (organized in bins).
 %% created by Douwe Horsthuis (douwehorsthuis@gmail.com) on 2/9/2021
-clear all
+clear variables
 logfile =[];
 s1_total=[];
 bar_bin_total = [];
@@ -11,7 +11,7 @@ rt_data = [];
 min_rt= 100;  %smallest possible RT in milisec
 max_rt= 2000; %biggest possible RT in milisec
 % This defines the set of subjects
-group =  {'TD'} ; % previous script had 2 groups, they can be added here if needed
+group =  {'TD'} ; % previous script had 2 groups, they can be added here. if you do update check line 22
 blocks= 5; %amount of blocks/logfiles everyone did
 home_path  = 'data\'; %place data is
 save_path  = 'save\'; %place you want to save data
