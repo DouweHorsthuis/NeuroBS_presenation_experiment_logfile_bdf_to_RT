@@ -3,7 +3,7 @@ This is all based on https://github.com/othneildrew/Best-README-Template, othnei
 that I thought were making things clearer
 
 When starting a new readme file, to avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`DouweHorsthuis`, `NeuroBS_presenation_experiment_logfile_bdf_to_RT`, `DouweJhorsthuis`, `douwehorsthuis@gmail.com`, `Calculating Pesentation experiment RT using Logfile or BDF  `, `This project was made to only calculate RT and transform it into a table and potentially an excel sheet `, 'douwe-horsthuis-725bb9188'
+`DouweHorsthuis`, `NeuroBS_presenation_experiment_logfile_bdf_to_RT`, `DouweJhorsthuis`, `douwehorsthuis@gmail.com`, `Calculating Presentation experiment RT using Logfile or BDF  `, `This project was made to only calculate RT and transform it into a table and potentially an excel sheet `, 'douwe-horsthuis-725bb9188'
 
 If you want to use markdown or HTML but you are not familiar check: https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
@@ -27,13 +27,13 @@ If you want to use markdown or HTML but you are not familiar check: https://www.
       <img src="images/logo.png" alt="Logo" width="286" height="120">
   </a> 
 
-<h3 align="center">Calculating Pesentation experiment Reaction Time (RT) using Logfile or BDF (Work in progress) </h3>
+<h3 align="center">Calculating Presentation experiment Reaction Time (RT) using Logfile or BDF (Work in progress) </h3>
 
 <h4 align="center">This project was made to only calculate RT and transform it into a table and potentially an excel sheet </h4>
 
 <!-- I think the table of contents is cleaner and more readable in markdown, so using markdown for these parts
 the basics are, put whatever you want to show up in [] put whatever you want to link to in () the linking part cannot
-have any spaces/characters, replaces spaces with - (_ does not work) the numbering should be indiferent (as you can see below) -->
+have any spaces/characters, replaces spaces with - (_ does not work) the numbering should be indifferent (as you can see below) -->
 
 **Table of Contents**
   
@@ -54,7 +54,7 @@ have any spaces/characters, replaces spaces with - (_ does not work) the numberi
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This project was made to look at the RT and the inter stimulus interval that took place before that reaction of a experiment ran using Presentation® (Neurobehavioral Systems). It can look at the logfiles that are the output of this program, or if the data is saved in a BDF file it is possible to look at that instead. It save the reaction time per trial per participant per condition. It can also do this for mulitiple groups (saving the groups in separate pages on the excel). If you want to use the BDF script you also need EEGlab, as it uses EEGlab functions and structures.
+This project was made to look at the RT and the inter stimulus interval that took place before that reaction of a experiment ran using Presentation® (Neurobehavioral Systems). It can look at the logfiles that are the output of this program, or if the data is saved in a BDF file it is possible to look at that instead. It save the reaction time per trial per participant per condition. It can also do this for multiple groups (saving the groups in separate pages on the excel). If you want to use the BDF script you also need EEGlab, as it uses EEGlab functions and structures.
 
 
 ### Built With
@@ -74,7 +74,7 @@ Software: If you want to use BDF files you'll need to have a copy of [EEGlab](ht
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-There are 2 ways of running the script the first one (Logfile_RT) that is explaned uses the logfiles created by the presenation experiment directly. The second one (BDF_RT) uses the BDF files to look at reaction time. The first one is a little bit more straight forward, but the second one allows for my variabilty. 
+There are 2 ways of running the script the first one (Logfile_RT) that is explained uses the logfiles created by the presenation experiment directly. The second one (BDF_RT) uses the BDF files to look at reaction time. The first one is a little bit more straight forward, but the second one allows for my variability. 
 
 ### Logfile_RT
 This script needs you to define a couple of things, but should be easy to manipulate without needing extra plugins for Matlab
@@ -115,7 +115,10 @@ cond_type={'B1(3)' 'B2(4)' 'B3(5)' 'B4(5)' 'B5(4)' 'B6(3)' 'B7(3)'}; %these are 
 new_cond_type = {'cond1' 'cond1' 'cond1' 'cond2' 'cond2' 'cond2' 'cond2'}; %these will be the new names of the bins, to make it more clear.
 condition_type = {'cond1' 'cond2'}; %how ever many conditions you want to plot can be assigned here
 ```
-What is different here is that you have to set thing for your binlist. The way to figure out what to input is to first make your own binlist. Your binlist is a normal .txt file with a very specific [structure]()
+What is different here is that you have to set thing for your binlist. The way to figure out what to input is to first make your own binlist. Your binlist is a normal .txt file with a very specific [structure](https://github.com/DouweHorsthuis/NeuroBS_presenation_experiment_logfile_bdf_to_RT/blob/main/images/binlist.png)
+See the example binlist in the tools folder. For more help check this [tutorial](https://github.com/lucklab/erplab/wiki/ERP-Bin-Operations).
+Once you defined that you need to run the script until line 51. You can now open the following structure EEG.event. Here you should be able to find all the cond_type variables that you want to include. 
+
 <!-- LICENSE -->
 ## License
 
@@ -156,5 +159,5 @@ Using one of the two matlab files allows you to calculate the reaction time of y
 
 Logfile_RT - loads all the logfiles of 1 participant, needs the event_code to start counting the RT and needs to know how many stim later the response is. if you need more conditions to include, or perhaps different response you can adapt. Will give you a matlab table and excel table with all RTs
 
-BDF_RT - Needs EEGlab plugin - loads all the BDF files of 1 particpant, needs an binlist (https://github.com/lucklab/erplab/wiki/ERP-Bin-Operations). Will give you a matlab table and excel table with all RTs
+BDF_RT - Needs EEGlab plugin - loads all the BDF files of 1 participant, needs an binlist (https://github.com/lucklab/erplab/wiki/ERP-Bin-Operations). Will give you a matlab table and excel table with all RTs
 
