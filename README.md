@@ -24,7 +24,7 @@ If you want to use markdown or HTML but you are not familiar check: https://www.
 <br />
 <p align="center">
   <a href="https://github.com/DouweHorsthuis/NeuroBS_presenation_experiment_logfile_bdf_to_RT/">
-      <img src="images/logo.png" alt="Logo" width="286" height="120">
+      <img src="images/logo.jpeg" alt="Logo" width="286" height="120">
   </a> 
 
 <h3 align="center">Calculating Presentation experiment Reaction Time (RT) using Logfile or BDF (Work in progress) </h3>
